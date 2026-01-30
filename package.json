@@ -1,0 +1,9 @@
+{
+  "name": "watch-insurance-advisor",
+  "version": "1.0.0",
+  "description": "AI-powered watch insurance advisor chatbot",
+  "private": true,
+  "dependencies": {
+    "openai": "^4.28.0"
+  }
+}
