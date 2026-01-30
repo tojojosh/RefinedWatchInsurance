@@ -66,8 +66,8 @@ def chat():
                 messages=[
                     {"role": "system", "content": SYSTEM_PROMPT}
                 ],
-                temperature=0.7,
-                max_tokens=300
+                temperature=0.8,
+                max_tokens=400
             )
             assistant_message = response.choices[0].message.content
             messages.append({"role": "assistant", "content": assistant_message})
@@ -88,8 +88,8 @@ def chat():
                 {"role": "system", "content": SYSTEM_PROMPT},
                 *messages
             ],
-            temperature=0.7,
-            max_tokens=400
+            temperature=0.8,
+            max_tokens=500
         )
         assistant_message = response.choices[0].message.content
         messages.append({"role": "assistant", "content": assistant_message})

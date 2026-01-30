@@ -72,8 +72,8 @@ def chat(messages: list, system_prompt: str) -> str:
                 {"role": "system", "content": system_prompt},
                 *messages
             ],
-            temperature=0.7,
-            max_tokens=500
+            temperature=0.8,
+            max_tokens=600
         )
         return response.choices[0].message.content
     except Exception as e:
