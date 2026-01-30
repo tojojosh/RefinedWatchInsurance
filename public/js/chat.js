@@ -12,6 +12,7 @@ const API_ENDPOINT = '/.netlify/functions/chat';
 
 // DOM Elements
 const chatMessages = document.getElementById('chatMessages');
+const chatContainer = document.querySelector('.chat-container');
 const welcomeCard = document.getElementById('welcomeCard');
 const inputArea = document.getElementById('inputArea');
 const messageInput = document.getElementById('messageInput');
@@ -188,7 +189,10 @@ function hideLoading() {
  * Scroll to the bottom of the chat
  */
 function scrollToBottom() {
-    chatMessages.scrollTop = chatMessages.scrollHeight;
+    // Use requestAnimationFrame to ensure DOM has updated before scrolling
+    requestAnimationFrame(() => {
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+    });
 }
 
 /**
