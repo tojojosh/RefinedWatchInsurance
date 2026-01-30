@@ -1,0 +1,8 @@
+{
+  "name": "watch-insurance-functions",
+  "version": "1.0.0",
+  "description": "Netlify Functions for Watch Insurance Advisor",
+  "dependencies": {
+    "openai": "^4.28.0"
+  }
+}
